@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading Nook — Library Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="wood-texture" aria-hidden="true"></div>
+    <div class="sidebar-blob" aria-hidden="true"></div>
+    <div class="sidebar-header">
+      <div class="logo-mark"></div>
+      <div>
+        <h1>Reading Nook</h1>
+        <p class="tagline">your library, sorted</p>
+      </div>
+    </div>
+
+    <div class="loans-section">
+      <h2>My Loans</h2>
+      <div id="loansList" class="loans-list">
+        <p class="empty-state"><div class="empty-state">
+  <svg class="shelf-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="6" y="10" width="10" height="26" rx="1.5" fill="#C68B59"/>
+    <rect x="19" y="6" width="10" height="30" rx="1.5" fill="#8A9A5B"/>
+    <rect x="32" y="14" width="10" height="22" rx="1.5" fill="#C97B63"/>
+    <line x1="4" y1="38" x2="44" y2="38" stroke="#6F4E37" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+  <p>Nothing checked out yet — borrow a book and it'll show up here.</p>
+</div></p>
+      </div>
+    </div>
+
+    <div class="policy-note">
+      <span class="policy-dot"></span>
+      Loans last 14 days · up to 3 books at once
+    </div>
+  </aside>
+
+  <!-- Main chat column -->
+  <main class="chat-column">
+    <header class="chat-header">
+      <div class="header-text">
+        <h2>Library Assistant</h2>
+        <p>Ask about any book — title, author, subject, or what you've borrowed</p>
+      </div>
+    </header>
+
+    <div id="chatWindow" class="chat-window"></div>
+
+    <div class="quick-replies" id="quickReplies">
+      <button class="chip">Show the catalog</button>
+      <button class="chip">Recommend a programming book</button>
+      <button class="chip">What have I borrowed?</button>
+      <button class="chip">Is Clean Code available?</button>
+    </div>
+
+    <form id="chatForm" class="chat-input-bar">
+      <input
+        id="chatInput"
+        type="text"
+        placeholder="Type a message… e.g. 'borrow Python Crash Course'"
+        autocomplete="off"
+      />
+      <button type="submit" class="send-btn" aria-label="Send message">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M4 12L20 4L14 20L11 13L4 12Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </form>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

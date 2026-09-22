@@ -1,0 +1,130 @@
+{
+  "books": {
+    "1": {
+      "title": "Python Crash Course",
+      "author": "Eric Matthes",
+      "isbn": "9781593279288",
+      "publisher": "No Starch Press",
+      "year": 2019,
+      "category": "Programming",
+      "pages": 544,
+      "shelf": "A-12",
+      "available": true
+    },
+    "2": {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "isbn": "9780132350884",
+      "publisher": "Prentice Hall",
+      "year": 2008,
+      "category": "Programming",
+      "pages": 464,
+      "shelf": "A-14",
+      "available": true
+    },
+    "3": {
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "isbn": "9780262046305",
+      "publisher": "MIT Press",
+      "year": 2022,
+      "category": "Computer Science",
+      "pages": 1312,
+      "shelf": "B-05",
+      "available": true
+    },
+    "4": {
+      "title": "The Pragmatic Programmer",
+      "author": "David Thomas and Andrew Hunt",
+      "isbn": "9780135957059",
+      "publisher": "Addison-Wesley",
+      "year": 2019,
+      "category": "Programming",
+      "pages": 352,
+      "shelf": "A-16",
+      "available": true
+    },
+    "5": {
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "isbn": "9780078022159",
+      "publisher": "McGraw-Hill",
+      "year": 2019,
+      "category": "Database",
+      "pages": 1376,
+      "shelf": "C-03",
+      "available": true
+    },
+    "6": {
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "isbn": "9780132126953",
+      "publisher": "Pearson",
+      "year": 2011,
+      "category": "Networking",
+      "pages": 960,
+      "shelf": "C-10",
+      "available": true
+    },
+    "7": {
+      "title": "Operating System Concepts",
+      "author": "Abraham Silberschatz",
+      "isbn": "9781119456339",
+      "publisher": "Wiley",
+      "year": 2018,
+      "category": "Operating Systems",
+      "pages": 976,
+      "shelf": "B-15",
+      "available": false
+    },
+    "8": {
+      "title": "Artificial Intelligence: A Modern Approach",
+      "author": "Stuart Russell and Peter Norvig",
+      "isbn": "9780134610993",
+      "publisher": "Pearson",
+      "year": 2021,
+      "category": "Artificial Intelligence",
+      "pages": 1160,
+      "shelf": "D-02",
+      "available": true
+    },
+    "9": {
+      "title": "Data Structures and Algorithms in Java",
+      "author": "Robert Lafore",
+      "isbn": "9780672324536",
+      "publisher": "Sams Publishing",
+      "year": 2002,
+      "category": "Data Structures",
+      "pages": 816,
+      "shelf": "B-10",
+      "available": true
+    },
+    "10": {
+      "title": "Engineering Mathematics",
+      "author": "John Bird",
+      "isbn": "9780415662814",
+      "publisher": "Routledge",
+      "year": 2017,
+      "category": "Mathematics",
+      "pages": 704,
+      "shelf": "E-04",
+      "available": true
+    }
+  },
+  "borrowed_by_user": [
+    7
+  ],
+  "history": [
+    {
+      "book_id": 7,
+      "title": "Operating System Concepts",
+      "borrowed_on": "2026-09-22",
+      "due_on": "2026-10-06",
+      "returned_on": null,
+      "status": "Borrowed"
+    }
+  ],
+  "context": {
+    "last_book": 7
+  }
+}
