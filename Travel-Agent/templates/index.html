@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trip Agent - Travel around the world</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="nav-wrap">
+  <nav class="nav card" aria-label="Main">
+    <a class="brand" href="#home">Trip<span>Agent</span></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About us</a></li>
+      <li><a href="#routes">Routes</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#finder">Trip finder</a></li>
+    </ul>
+    <a class="btn btn-dark" href="#finder">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero card">
+    <div class="scene" id="hero-scene" aria-hidden="true"></div>
+    <div class="hero-text">
+      <p class="eyebrow">Plan. Approve. Go.</p>
+      <h1>TRAVEL AROUND<br>THE WORLD</h1>
+      <p class="lead">Tell our agent where you want to go. It searches flights and hotels, adjusts when things fall through, and books only after you say yes.</p>
+      <a class="btn btn-green" href="#finder">Plan my trip</a>
+    </div>
+  </section>
+
+  <!-- ROUTES -->
+  <section id="routes" class="section">
+    <h2>ROUTES</h2>
+    <div class="routes">
+      <article class="route card hover" data-prefill="I want to go to Goa on 2026-12-20 for 3 nights">
+        <div class="route-art scene" data-scene="beach"></div>
+        <div class="route-body">
+          <h3>Goa, India</h3>
+          <p class="muted">Beaches &amp; boutique stays</p>
+          <p class="price">Flights from ₹4,500</p>
+          <p class="muted">Departs 20 Dec 2026</p>
+          <button class="btn btn-light" type="button">Plan this trip</button>
+        </div>
+      </article>
+      <article class="route card hover" data-prefill="I want to go to Delhi on 2026-12-22 for 3 nights">
+        <div class="route-art scene" data-scene="temple"></div>
+        <div class="route-body">
+          <h3>Delhi, India</h3>
+          <p class="muted">Heritage &amp; old city walks</p>
+          <p class="price">Flights from ₹5,200</p>
+          <p class="muted">Departs 22 Dec 2026</p>
+          <button class="btn btn-light" type="button">Plan this trip</button>
+        </div>
+      </article>
+      <article class="route card hover" data-prefill="I want to go to Mumbai on 2026-12-27 for 3 nights">
+        <div class="route-art scene" data-scene="city"></div>
+        <div class="route-body">
+          <h3>Mumbai, India</h3>
+          <p class="muted">Skyline &amp; sea-facing drives</p>
+          <p class="price">Flights from ₹3,900</p>
+          <p class="muted">Departs 27 Dec 2026</p>
+          <button class="btn btn-light" type="button">Plan this trip</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section id="about" class="section">
+    <h2>WHAT WE DO</h2>
+    <div class="steps">
+      <div class="step-card card">
+        <span class="num">01</span>
+        <h3>Understand</h3>
+        <p>We turn your request into a clear goal and ask for anything that's missing.</p>
+      </div>
+      <div class="step-card card">
+        <span class="num">02</span>
+        <h3>Search &amp; re-plan</h3>
+        <p>Flights and hotels are compared against your budget and saved preferences. If nothing fits, we adjust and try again.</p>
+      </div>
+      <div class="step-card card">
+        <span class="num">03</span>
+        <h3>You approve</h3>
+        <p>Nothing is booked until you press Approve. Reject, and nothing happens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESORT DETAIL -->
+  <section id="reviews" class="section">
+    <h2>FEATURED STAY</h2>
+    <article class="resort card" aria-label="Wyndham Garden Ubud">
+      <div class="carousel" id="carousel">
+        <div class="track" id="track"></div>
+        <button class="car-btn prev" id="prev" type="button" aria-label="Previous photo">‹</button>
+        <button class="car-btn next" id="next" type="button" aria-label="Next photo">›</button>
+        <div class="dots" id="dots"></div>
+      </div>
+      <div class="resort-body">
+        <h3>Wyndham Garden Ubud</h3>
+        <p class="muted">Ubud, Bali</p>
+        <p class="stars" aria-label="5 out of 5 stars">★★★★★ <span class="muted">5.0 · Excellent</span></p>
+        <p>Set among rice terraces and tropical greenery, with an infinity pool that looks out over the jungle. A calm base for slow mornings, spa afternoons and easy trips into town.</p>
+        <div class="review">
+          <p class="stars small">★★★★★</p>
+          <p>"Waking up to the view from the pool was the highlight of our trip. Quiet, friendly staff, and the breakfast was lovely."</p>
+          <p class="muted">Anika R. · Stayed 4 nights</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- TRIP FINDER -->
+  <section id="finder" class="section">
+    <h2>TRIP FINDER</h2>
+    <div class="finder card">
+      <div class="finder-head">
+        <span class="avatar" aria-hidden="true">J</span>
+        <div><strong>Johny</strong><br><span class="muted small">Your trip assistant</span></div>
+      </div>
+      <div class="chat" id="chat" aria-live="polite"></div>
+      <div class="approval" id="approval" aria-live="polite"></div>
+      <div class="quick" id="quick"></div>
+      <div class="bar">
+        <input id="input" type="text" aria-label="Message" placeholder="e.g. Bengaluru to Goa on 2026-12-25, 3 nights, 2 travelers, budget 100000">
+        <button class="btn btn-dark" id="send" type="button">Send</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Trip Agent · Mock data for demo purposes</p>
+</footer>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
